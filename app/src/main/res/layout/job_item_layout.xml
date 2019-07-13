@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.cardview.widget.CardView
+    app:cardElevation="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:text="Company Name"
+            android:id="@+id/company_name"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:text="Role"
+            android:id="@+id/role"
+            android:layout_below="@+id/company_name"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:text="Job Description"
+            android:id="@+id/job_description"
+            android:layout_below="@+id/role"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:text="Skills Required"
+            android:id="@+id/skills_required"
+            android:layout_below="@+id/job_description"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:text="Website"
+            android:id="@+id/website"
+            android:layout_below="@+id/skills_required"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
