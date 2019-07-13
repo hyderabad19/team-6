@@ -23,6 +23,10 @@ public class Courses extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courses);
         mAuth = FirebaseAuth.getInstance();
+        others=(ImageButton)findViewById(R.id.othersimg);
+        sk=(ImageButton)findViewById(R.id.softskillsimg) ;
+        tsk=(ImageButton)findViewById(R.id.techimg);
+
         sk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
