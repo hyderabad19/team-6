@@ -12,7 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".bigdata"></activity>
+        <activity
+            android:name=".gdquiz"
+            android:label="@string/title_activity_gdquiz"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".quizzes" />
+        <activity android:name=".help" />
+        <activity android:name=".bigdata" />
         <activity android:name=".ml" />
         <activity android:name=".techskills" />
         <activity android:name=".jam" />
