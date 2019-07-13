@@ -3,11 +3,11 @@ package com.example.team6;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class contentrepository extends AppCompatActivity {
+public class jam extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contentrepository);
+        setContentView(R.layout.activity_jam);
     }
 }
