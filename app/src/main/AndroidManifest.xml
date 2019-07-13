@@ -14,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".gd"></activity>
+
+        <activity android:name=".Forum"></activity>
+master
         <activity android:name=".Otherskills" />
         <activity android:name=".Techskills" />
         <activity android:name=".Softskills" />
