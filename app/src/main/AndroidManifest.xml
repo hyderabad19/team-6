@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".jam"></activity>
+        <activity android:name=".techskills"></activity>
+        <activity android:name=".jam" />
         <activity android:name=".registertrainer" />
         <activity android:name=".registertrainee" />
         <activity android:name=".registerusers" />

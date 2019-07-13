@@ -6,8 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".jam">
 
+    <EditText
+        android:id="@+id/feedbacktext2"
+        android:layout_width="297dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Any Suggestions/Comments"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
+
     <TextView
-        android:id="@+id/gdtext3"
+        android:id="@+id/descriptiontext1"
+        android:layout_width="352dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Description:As the name suggests, you are supposed to speak on a given topic for a minute. This is to test your communication skills, to gauge your confidence and test your general awareness."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
+
+    <TextView
+        android:id="@+id/jamtext1"
         android:layout_width="205dp"
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
@@ -15,7 +53,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Group Discussion"
+        android:text="Jam Sessions"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
