@@ -1,10 +1,13 @@
 package com.example.team6;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.MenuItem;
 
 import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -21,6 +24,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private ImageView courses,quiz,cous,job;
+    private TextView course,quizzes,cs,jobs;
+    View appBarMain, contentMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +42,72 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        appBarMain = (View)findViewById(R.id.app_bar_main);
+        contentMain = (View)appBarMain.findViewById(R.id.content_main);
+        courses=(ImageView)contentMain.findViewById(R.id.ivCourses);
+        course=(TextView)contentMain.findViewById(R.id.tvCourse);
+        quiz=(ImageView)contentMain.findViewById(R.id.ivQuiz);
+        quizzes=(TextView)contentMain.findViewById(R.id.tvQuizzes);
+        cous=(ImageView)contentMain.findViewById(R.id.ivCous);
+        cs=(TextView)contentMain.findViewById(R.id.tvCs);
+        job=(ImageView)contentMain.findViewById(R.id.ivJob);
+        jobs=(TextView)contentMain.findViewById(R.id.tvJobs);
+        courses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Courses.class));
+            }
+        });
+        course.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Courses.class));
+            }
+        });
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Courses.class));
+            }
+        });
+        quizzes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Courses.class));
+            }
+        });
+        cous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Forum.class));
+            }
+        });
+        cs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Forum.class));
+            }
+        });
+        job.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Jobs.class));
+            }
+        });
+        jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Jobs.class));
+            }
+        });
     }
-
 
     @Override
     public void onBackPressed() {
@@ -84,17 +147,13 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_profile) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Intent i = new Intent(MainActivity.this,Profile.class);
+            startActivity(i);
+        } else if (id == R.id.nav_settings) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_faq) {
 
         }
 

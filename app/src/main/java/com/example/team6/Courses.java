@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,21 +18,30 @@ import java.util.ArrayList;
 public class Courses extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    ImageButton sk,tsk ,others;
+    private TextView others,techskilltext,softskills,categoriestext;
+    private ImageButton othersimg,techimg,softskillsimg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courses);
         mAuth = FirebaseAuth.getInstance();
-        sk.setOnClickListener(new View.OnClickListener() {
+
+
+        softskillsimg = (ImageButton) findViewById(R.id.skills);
+        techimg = (ImageButton) findViewById(R.id.techimg);
+        othersimg= (ImageButton) findViewById(R.id.othersimg);
+        softskillsimg.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Courses.this,Softskills.class);
                 startActivity(intent);
             }
         });
-        tsk.setOnClickListener(new View.OnClickListener() {
+
+        techimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Courses.this,Techskills.class);
@@ -39,7 +49,7 @@ public class Courses extends AppCompatActivity {
             }
 
         });
-        others.setOnClickListener(new View.OnClickListener() {
+        othersimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Courses.this,Otherskills.class);
