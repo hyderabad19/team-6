@@ -18,8 +18,8 @@ import java.util.ArrayList;
 public class Courses extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-     TextView others,techskilltext,softskills,categoriestext;
-     ImageView othersimg,techimg,softskillsimg;
+    private TextView others,techskilltext,softskills,categoriestext;
+     private ImageButton othersimg,techimg,softskillsimg;
 
 
     @Override
@@ -28,11 +28,10 @@ public class Courses extends AppCompatActivity {
         setContentView(R.layout.activity_courses);
         mAuth = FirebaseAuth.getInstance();
 
-        sk.setOnClickListener(new View.OnClickListener() {
 
-        softskillsimg = (ImageView) findViewById(R.id.softskillsimg);
-        techimg = (ImageView) findViewById(R.id.techimg);
-        othersimg= (ImageView) findViewById(R.id.othersimg);
+        softskillsimg = (ImageButton) findViewById(R.id.skills);
+        techimg = (ImageButton) findViewById(R.id.techimg);
+        othersimg= (ImageButton) findViewById(R.id.othersimg);
         softskillsimg.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -41,6 +40,7 @@ public class Courses extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         techimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

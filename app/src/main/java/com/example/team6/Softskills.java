@@ -19,7 +19,6 @@ public class Softskills extends AppCompatActivity {
 
     private ImageView gpb,jmb;
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

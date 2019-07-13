@@ -8,6 +8,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import android.widget.VideoView;
 
 public class gd extends AppCompatActivity {
     private VideoView videoView;
-    private ImageView playbtn;
+    private ImageButton playbtn;
     private TextView stime;
     private TextView etime;
     private ProgressBar progressBar,buffer;
@@ -28,10 +29,16 @@ public class gd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gd);
-        uri = Uri.parse("dnfe");
+        videoView=(VideoView)findViewById(R.id.videoView);
+        playbtn=(ImageButton)findViewById(R.id.start);
+        stime= (TextView)findViewById(R.id.starttextview);;
+        etime=(TextView)findViewById(R.id.stoptextview);
+        progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        buffer=(ProgressBar)findViewById(R.id.buffering) ;
+        uri = Uri.parse("https://firebasestorage.googleapis;.com/v0/b/team6-1d1c4.appspot.com/o/What%20Are%20Soft%20Skills.mp4?alt=media&token=74cc833e-43a3-4bc3-ab52-95d505e21d30");
         progressBar.setMax(100);
         videoView.setVideoURI(uri);
-        videoView.requestFocus();
+        videoView.requestFocus();;
         isplaying=false;
         new gd.VideoProgress().execute();
         videoView.setOnInfoListener(new MediaPlayer.OnInfoListener() {
@@ -59,7 +66,7 @@ public class gd extends AppCompatActivity {
                 if(isplaying)
                 {
                     videoView.pause();
-                    isplaying=false;
+                isplaying=false;;
                     playbtn.setImageResource(R.mipmap.pause);
                 }
                 else
@@ -79,13 +86,13 @@ public class gd extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
 
-            do {
-                start=videoView.getCurrentPosition()/100;
+            do {if(isplaying  ) {
+                start = videoView.getCurrentPosition() / 1000;
 
 
                 publishProgress(start);
 
-
+            }
 
             }while(progressBar.getProgress()<=100);
             return null;
@@ -97,9 +104,9 @@ public class gd extends AppCompatActivity {
             try {
                 int cp=values[0]*100/duration;
 
-                progressBar.setProgress(values[0]);
+                progressBar.setProgress(cp);
 
-                stime.setText(String.format("%02d:%02d",values[0]/60,values[0]%60));
+                stime.setText(String.format("%02d:%02d",60,values[0]%60));
 
 
 
