@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class JobDetails extends AppCompatActivity {
 
     @Override
