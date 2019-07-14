@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mlquiz"></activity>
+        <activity android:name=".feedback"></activity>
+        <activity android:name=".mlquiz" />
         <activity android:name=".gdquiz" />
         <activity android:name=".quizzes" />
         <activity android:name=".help" />
