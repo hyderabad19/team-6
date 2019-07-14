@@ -8,8 +8,8 @@
             android:id="@+id/nav_profile"
             android:title="Profile"/>
         <item
-            android:id="@+id/nav_settings"
-            android:title="Settings" />
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
         <item
             android:id="@+id/nav_faq"
             android:title="FAQ" />

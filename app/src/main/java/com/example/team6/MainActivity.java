@@ -19,6 +19,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -151,7 +152,12 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
             Intent i = new Intent(MainActivity.this,Profile.class);
             startActivity(i);
-        } else if (id == R.id.nav_settings) {
+        } else if (id == R.id.nav_logout) {
+            FirebaseAuth.getInstance().signOut();
+            Intent i =new Intent(MainActivity.this,Login.class);
+            startActivity(i);
+            finish();
+            
 
         } else if (id == R.id.nav_faq) {
 
