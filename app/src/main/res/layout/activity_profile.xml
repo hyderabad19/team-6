@@ -57,7 +57,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="325dp"
-        android:text="No file is selected" />
+        android:text="No file is selected"
+        android:layout_marginTop="50dp"
+        />
 
     <Button
         android:id="@+id/upload"

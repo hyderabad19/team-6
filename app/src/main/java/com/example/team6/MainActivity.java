@@ -75,13 +75,13 @@ public class MainActivity extends AppCompatActivity
         quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Courses.class));
+                startActivity(new Intent(MainActivity.this,quizzes.class));
             }
         });
         quizzes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Courses.class));
+                startActivity(new Intent(MainActivity.this,quizzes.class));
             }
         });
         cous.setOnClickListener(new View.OnClickListener() {
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity
             Intent i =new Intent(MainActivity.this,Login.class);
             startActivity(i);
             finish();
-            
+
 
         } else if (id == R.id.nav_faq) {
 
